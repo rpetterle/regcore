@@ -1,0 +1,13 @@
+Package: unitcore
+Title: Base Utilities and S3 Methods for Regression Models
+Version: 0.1.0
+Authors@R: 
+    person("Ricardo Rasmussen", "Petterle", , "ricardo.petterle@ufpr.br", role = c("aut", "cre"),
+           comment = c(ORCID = "https://orcid.org/0000-0001-7735-1077"))
+Description: Provides core generic S3 functions (such as goodness-of-fit tables, 
+    equation extraction, and diagnostic plots) to support and unify a family of 
+    statistical modeling packages ('unitregTMB', 'unitGEE', 'ashgTMB', 'betamodal', etc.).
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
