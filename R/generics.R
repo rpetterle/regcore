@@ -8,6 +8,7 @@
 #' \itemize{
 #'   \item \code{\link[betamodal]{extract_equations.betamodal}} for betamodal models.
 #'   \item \code{\link[unitregTMB]{extract_equations.unitregTMB}} for unitregTMB models.
+#'   \item \code{\link[uigTMB]{extract_equations.uigTMB}} for uigTMB models.
 #' }
 #' 
 #' @export
@@ -25,6 +26,7 @@ extract_equations <- function(object, ...) {
 #' \itemize{
 #'   \item \code{\link[betamodal]{gof_tab.betamodal}} for betamodal models.
 #'   \item \code{\link[unitregTMB]{gof_tab.unitregTMB}} for unitregTMB models.
+#'   \item \code{\link[uigTMB]{gof_tab.uigTMB}} for uigTMB models.
 #' }
 #' 
 #' @export
@@ -42,6 +44,7 @@ gof_tab <- function(object, ...) {
 #' \itemize{
 #'   \item \code{\link[betamodal]{plot_envelope.betamodal}} for betamodal models.
 #'   \item \code{\link[unitregTMB]{plot_envelope.unitregTMB}} for unitregTMB models.
+#'   \item \code{\link[uigTMB]{plot_envelope.uigTMB}} for uigTMB models.
 #' }
 #' 
 #' @export
@@ -59,6 +62,7 @@ plot_envelope <- function(object, ...) {
 #' \itemize{
 #'   \item \code{\link[betamodal]{summary_coef.betamodal}} for betamodal models.
 #'   \item \code{\link[unitregTMB]{summary_coef.unitregTMB}} for unitregTMB models.
+#'   \item \code{\link[uigTMB]{summary_coef.uigTMB}} for uigTMB models.
 #' }
 #' 
 #' @export
@@ -76,6 +80,7 @@ summary_coef <- function(object, ...) {
 #' \itemize{
 #'   \item \code{\link[betamodal]{plot_ranef.betamodal}} for betamodal models.
 #'   \item \code{\link[unitregTMB]{plot_ranef.unitregTMB}} for unitregTMB models.
+#'   \item \code{\link[uigTMB]{plot_ranef.uigTMB}} for uigTMB models.
 #' }
 #' 
 #' @export
@@ -93,6 +98,7 @@ plot_ranef <- function(object, ...) {
 #' \itemize{
 #'   \item \code{\link[betamodal]{write_methods.betamodal}} for betamodal models.
 #'   \item \code{\link[unitregTMB]{write_methods.unitregTMB}} for unitregTMB models.
+#'   \item \code{\link[uigTMB]{write_methods.uigTMB}} for uigTMB models.
 #' }
 #' 
 #' @export
@@ -110,6 +116,7 @@ write_methods <- function(object, ...) {
 #' \itemize{
 #'   \item \code{\link[betamodal]{random_effects.betamodal}} for betamodal models.
 #'   \item \code{\link[unitregTMB]{random_effects.unitregTMB}} for unitregTMB models.
+#'   \item \code{\link[uigTMB]{random_effects.uigTMB}} for uigTMB models.
 #' }
 #' 
 #' @export
@@ -128,6 +135,7 @@ random_effects <- function(object, ...) {
 #' \itemize{
 #'   \item \code{\link[betamodal]{vuong_test.betamodal}} for betamodal models.
 #'   \item \code{\link[unitregTMB]{vuong_test.unitregTMB}} for unitregTMB models.
+#'   \item \code{\link[uigTMB]{vuong_test.uigTMB}} for uigTMB models.
 #' }
 #' 
 #' @export
@@ -144,6 +152,7 @@ vuong_test <- function(object1, object2, ...) {
 #' \itemize{
 #'   \item \code{\link[betamodal]{pairwise_vuong_test.betamodal}} for betamodal models.
 #'   \item \code{\link[unitregTMB]{pairwise_vuong_test.unitregTMB}} for unitregTMB models.
+#'   \item \code{\link[uigTMB]{pairwise_vuong_test.uigTMB}} for uigTMB models.
 #' }
 #' 
 #' @export
@@ -161,6 +170,7 @@ pairwise_vuong_test <- function(...) {
 #' \itemize{
 #'   \item \code{\link[betamodal]{stepCriterion.betamodal}} for betamodal models.
 #'   \item \code{\link[unitregTMB]{stepCriterion.unitregTMB}} for unitregTMB models.
+#'   \item \code{\link[uigTMB]{stepCriterion.uigTMB}} for uigTMB models.
 #' }
 #' 
 #' @export
@@ -178,6 +188,7 @@ stepCriterion <- function(object, ...) {
 #' \itemize{
 #'   \item \code{\link[betamodal]{df_envelopes.betamodal}} for betamodal models.
 #'   \item \code{\link[unitregTMB]{df_envelopes.unitregTMB}} for unitregTMB models.
+#'   \item \code{\link[uigTMB]{df_envelopes.uigTMB}} for uigTMB models.
 #' }
 #' 
 #' @export
