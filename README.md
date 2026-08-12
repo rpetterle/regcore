@@ -1,16 +1,16 @@
-# unitcore: Core Generic Functions for Unit Interval Regression Packages <img src="man/figures/Logo2.png" align="right" width="309" />
+# regcore: Core Generic Functions for Regression R Packages <img src="man/figures/Logo2.png" align="right" width="309" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/rpetterle/unitcore/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rpetterle/unitcore/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/rpetterle/regcore/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rpetterle/regcore/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-**unitcore** provides the foundational infrastructure and S3 generic functions for a suite of R packages dedicated to regression modeling of continuous bounded responses (such as `unitregTMB`, `betamodal`, and `uigTMB`). 
+**regcore** provides the foundational infrastructure and S3 generic functions for a suite of statistical regression R packages (such as `unitregTMB`, `betamodal`, `uigTMB`, and upcoming packages for other data structures, like continuous positive data). 
 
-By centralizing these generic methods, `unitcore` ensures a consistent, standardized user interface and seamless interoperability across different modeling frameworks for unit interval data, whether working with mean, quantile, or modal regression.
+By centralizing these generic methods, `regcore` ensures a consistent, standardized user interface and seamless interoperability across different regression frameworks, avoiding code duplication across packages and providing a unified experience for the end-user.
 
 ## Provided S3 Generics
 
-This package exports a set of generic functions that downstream packages implement. They are categorized into four main areas:
+This package exports a set of generic functions that downstream regression packages implement. They are categorized into four main areas:
 
 ### 1. Model Selection & Comparison
 * **`vuong_test()`**: Performs the Vuong test to rigorously compare two non-nested competing models.
@@ -33,16 +33,16 @@ This package exports a set of generic functions that downstream packages impleme
 
 ## Installation
 
-You can install the development version of `unitcore` from GitHub using the `remotes` package. 
+You can install the development version of `regcore` from GitHub using the `remotes` package. 
 
 ```r
 # install.packages("remotes")
-remotes::install_github("rpetterle/unitcore")
+remotes::install_github("rpetterle/regcore")
 ```
 
 ## Usage for Package Developers
 
-If you are developing a new regression package for bounded data and want to utilize these standardized generics, simply import `unitcore` in your `DESCRIPTION` file and define the respective methods for your model object class. 
+If you are developing a new statistical regression R package and want to utilize these standardized generics, simply import `regcore` in your `DESCRIPTION` file and define the respective methods for your model object class. 
 
 For example, in your new package:
 
@@ -53,7 +53,7 @@ extract_equations.my_new_model <- function(object, ...) {
 }
 ```
 
-For details on specific methods already implemented, see the documentation in their respective packages (`unitregTMB`, `betamodal`, `uigTMB`).
+For details on specific methods already implemented, see the documentation in their respective packages.
 
 ## License
 
