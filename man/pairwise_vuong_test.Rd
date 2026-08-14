@@ -17,5 +17,6 @@ For details on specific methods, see the documentation in their respective packa
 \itemize{
 \item \code{\link[betamodal]{pairwise_vuong_test.betamodal}} for betamodal models.
 \item \code{\link[unitregTMB]{pairwise_vuong_test.unitregTMB}} for unitregTMB models.
+\item \code{\link[uigTMB]{pairwise_vuong_test.uigTMB}} for uigTMB models.
 }
 }

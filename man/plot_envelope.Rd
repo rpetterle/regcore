@@ -19,5 +19,6 @@ For details on specific methods, see the documentation in their respective packa
 \itemize{
 \item \code{\link[betamodal]{plot_envelope.betamodal}} for betamodal models.
 \item \code{\link[unitregTMB]{plot_envelope.unitregTMB}} for unitregTMB models.
+\item \code{\link[uigTMB]{plot_envelope.uigTMB}} for uigTMB models.
 }
 }

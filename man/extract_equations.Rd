@@ -19,5 +19,6 @@ For details on specific methods, see the documentation in their respective packa
 \itemize{
 \item \code{\link[betamodal]{extract_equations.betamodal}} for betamodal models.
 \item \code{\link[unitregTMB]{extract_equations.unitregTMB}} for unitregTMB models.
+\item \code{\link[uigTMB]{extract_equations.uigTMB}} for uigTMB models.
 }
 }

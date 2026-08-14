@@ -19,5 +19,6 @@ For details on specific methods, see the documentation in their respective packa
 \itemize{
 \item \code{\link[betamodal]{summary_coef.betamodal}} for betamodal models.
 \item \code{\link[unitregTMB]{summary_coef.unitregTMB}} for unitregTMB models.
+\item \code{\link[uigTMB]{summary_coef.uigTMB}} for uigTMB models.
 }
 }

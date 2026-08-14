@@ -21,5 +21,6 @@ For details on specific methods, see the documentation in their respective packa
 \itemize{
 \item \code{\link[betamodal]{vuong_test.betamodal}} for betamodal models.
 \item \code{\link[unitregTMB]{vuong_test.unitregTMB}} for unitregTMB models.
+\item \code{\link[uigTMB]{vuong_test.uigTMB}} for uigTMB models.
 }
 }

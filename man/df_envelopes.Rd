@@ -19,5 +19,6 @@ For details on specific methods, see the documentation in their respective packa
 \itemize{
 \item \code{\link[betamodal]{df_envelopes.betamodal}} for betamodal models.
 \item \code{\link[unitregTMB]{df_envelopes.unitregTMB}} for unitregTMB models.
+\item \code{\link[uigTMB]{df_envelopes.uigTMB}} for uigTMB models.
 }
 }

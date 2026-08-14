@@ -19,5 +19,6 @@ For details on specific methods, see the documentation in their respective packa
 \itemize{
 \item \code{\link[betamodal]{random_effects.betamodal}} for betamodal models.
 \item \code{\link[unitregTMB]{random_effects.unitregTMB}} for unitregTMB models.
+\item \code{\link[uigTMB]{random_effects.uigTMB}} for uigTMB models.
 }
 }

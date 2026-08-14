@@ -19,5 +19,6 @@ For details on specific methods, see the documentation in their respective packa
 \itemize{
 \item \code{\link[betamodal]{write_methods.betamodal}} for betamodal models.
 \item \code{\link[unitregTMB]{write_methods.unitregTMB}} for unitregTMB models.
+\item \code{\link[uigTMB]{write_methods.uigTMB}} for uigTMB models.
 }
 }

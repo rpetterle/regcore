@@ -19,5 +19,6 @@ For details on specific methods, see the documentation in their respective packa
 \itemize{
 \item \code{\link[betamodal]{plot_ranef.betamodal}} for betamodal models.
 \item \code{\link[unitregTMB]{plot_ranef.unitregTMB}} for unitregTMB models.
+\item \code{\link[uigTMB]{plot_ranef.uigTMB}} for uigTMB models.
 }
 }

@@ -19,5 +19,6 @@ For details on specific methods, see the documentation in their respective packa
 \itemize{
 \item \code{\link[betamodal]{stepCriterion.betamodal}} for betamodal models.
 \item \code{\link[unitregTMB]{stepCriterion.unitregTMB}} for unitregTMB models.
+\item \code{\link[uigTMB]{stepCriterion.uigTMB}} for uigTMB models.
 }
 }

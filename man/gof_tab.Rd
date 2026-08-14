@@ -19,5 +19,6 @@ For details on specific methods, see the documentation in their respective packa
 \itemize{
 \item \code{\link[betamodal]{gof_tab.betamodal}} for betamodal models.
 \item \code{\link[unitregTMB]{gof_tab.unitregTMB}} for unitregTMB models.
+\item \code{\link[uigTMB]{gof_tab.uigTMB}} for uigTMB models.
 }
 }
