@@ -1,4 +1,4 @@
-# regcore: Core Generic Functions for Regression R Packages <img src="man/figures/Logo2.png" align="right" width="309" />
+# regcore: Core Generic Functions for Regression R Packages <img src="man/figures/Logo.png" align="right" width="309" />
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/rpetterle/regcore/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rpetterle/regcore/actions/workflows/R-CMD-check.yaml)
@@ -57,4 +57,4 @@ For details on specific methods already implemented, see the documentation in th
 
 ## License
 
-This package is licensed under the MIT License.
+This package is licensed under the GPL (>= 3) License.
