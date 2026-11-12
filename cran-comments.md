@@ -1,22 +1,24 @@
 ## First CRAN submission
 
-This is the initial CRAN submission of regcore, a package containing S3 generic
-interfaces for regression modeling packages. Model-specific methods are
-implemented by downstream packages; regcore has no runtime dependencies.
+This is the initial CRAN submission of `regcore`, a package providing S3 generic functions for regression model diagnostics, model comparison, coefficient summaries, random-effects extraction, and reporting.
+
+The package provides common interfaces that can be implemented by other R packages, including `betamodal` and `unitregTMB`. It has no runtime dependencies beyond R.
 
 ## Check results
 
-The maintainer reported 0 errors, 0 warnings, and 0 notes for the **previous**
-package source archive on Ubuntu Linux using R CMD check --as-cran, with the
-external clock check disabled. The revised source included here still requires
-fresh local and cross-platform checks before submission.
+- Ubuntu Linux (R 4.4.2): 0 errors, 0 warnings, 0 notes.
+- Windows (R-devel, WinBuilder): 0 errors, 0 warnings, 1 note.
+- GitHub Actions: R CMD check passed.
+- macOS: Not independently verified.
 
-- Ubuntu Linux (R release): PENDING
-- Windows (R release/devel): PENDING
-- macOS (R release): PENDING
-- R-devel: PENDING
+The local Ubuntu check was performed using `--as-cran`, with the external system clock verification disabled.
+
+The only note reported by WinBuilder was:
+
+    New submission
+
+This note is expected because `regcore` is being submitted to CRAN for the first time.
 
 ## Reverse dependencies
 
-None on CRAN for the initial submission. Development packages relying on the
-S3 generic interfaces are not listed as mandatory dependencies.
+There are no reverse dependencies on CRAN, as this is the initial submission. Packages under development that use the S3 generic interfaces are not required dependencies of `regcore`.
