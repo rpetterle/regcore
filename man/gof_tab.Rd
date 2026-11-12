@@ -24,7 +24,13 @@ This S3 generic acts as a unified interface to evaluate model performance.
 When multiple models are provided via \code{...}, downstream methods typically
 align the metrics into a clear comparative table.
 }
+\examples{
+fit <- structure(list(aic = 12.5), class = "demo_regression")
+gof_tab.demo_regression <- function(object, ...) data.frame(AIC = object$aic)
+gof_tab(fit)
+
+}
 \seealso{
-For class-specific implementations, consult the documentation of the
-corresponding downstream regression package.
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }

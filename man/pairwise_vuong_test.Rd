@@ -10,19 +10,19 @@ pairwise_vuong_test(...)
 \item{...}{Fitted model objects to be compared.}
 }
 \value{
-Returns a structured object (e.g., \code{pairwise.htest}) detailing the
-pairwise test statistics and adjusted p-values.
+The return value depends on the class-specific method, often a structured
+collection of pairwise statistics and p-values.
 }
 \description{
 Conducts pairwise Vuong likelihood ratio tests across multiple non-nested
 competing models.
 }
 \details{
-This generic is useful when evaluating more than two models simultaneously,
-generating a matrix of comparisons (with adjusted p-values) to identify the
-best fitting model.
+Downstream methods can compare more than two models simultaneously,
+returning a matrix of comparisons (and, when supported, adjusted p-values) to assess
+relative model fit.
 }
 \seealso{
-For class-specific implementations, consult the documentation of the
-corresponding downstream regression package.
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }

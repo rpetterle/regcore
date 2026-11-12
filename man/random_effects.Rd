@@ -2,7 +2,7 @@
 % Please edit documentation in R/generics.R
 \name{random_effects}
 \alias{random_effects}
-\title{Extract Random Effects (BLUPs)}
+\title{Extract Predicted Random Effects}
 \usage{
 random_effects(object, ...)
 }
@@ -16,14 +16,14 @@ Typically returns a list (one element per grouping variable) containing
 data frames of the estimated random effects.
 }
 \description{
-Extracts the Best Linear Unbiased Predictors (BLUPs) for the random effects
-of a fitted mixed-effects model.
+Extracts predicted random effects (typically conditional modes) from
+a fitted mixed-effects model.
 }
 \details{
 This S3 generic provides a unified way to retrieve conditional modes. Methods
 typically organize the output by grouping factors, handling multiple random terms.
 }
 \seealso{
-For class-specific implementations, consult the documentation of the
-corresponding downstream regression package.
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }

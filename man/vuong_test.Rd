@@ -26,6 +26,6 @@ The Vuong test utilizes conditional pointwise log-likelihoods. This S3 generic
 dispatches the extraction and statistical testing to specific model implementations.
 }
 \seealso{
-For class-specific implementations, consult the documentation of the
-corresponding downstream regression package.
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }

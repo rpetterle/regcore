@@ -16,14 +16,14 @@ Invisibly returns a data frame containing the sorted estimated random effects
 and their confidence bounds, while generating a plot.
 }
 \description{
-Produces a caterpillar plot of the conditional modes (BLUPs) of the random
-effects from a fitted mixed-effects model, along with their confidence intervals.
+Produces a caterpillar plot of the predicted conditional modes of the random
+effects from a fitted mixed-effects model, optionally with uncertainty intervals.
 }
 \details{
 Visualizes unobserved heterogeneity at the group level. The generic delegates
 the extraction and sorting of the estimates to class-specific methods.
 }
 \seealso{
-For class-specific implementations, consult the documentation of the
-corresponding downstream regression package.
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }

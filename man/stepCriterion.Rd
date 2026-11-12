@@ -27,6 +27,6 @@ Methods for this generic generally focus on optimizing the main location
 (like precision or zero-inflation) intact during the elimination process.
 }
 \seealso{
-For class-specific implementations, consult the documentation of the
-corresponding downstream regression package.
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }

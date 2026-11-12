@@ -2,3 +2,6 @@
 ^\.Rproj\.user$
 ^data-raw$
 ^Logo\.png$
+^\.github$
+^cran-comments\.md$
+^regcore\.Rproj$

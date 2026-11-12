@@ -21,12 +21,12 @@ Extracts the coordinates of simulated envelopes from one or more fitted models,
 returning a tidy data frame in long format.
 }
 \details{
-While \code{plot_envelope()} generates a base R graphic, \code{df_envelopes()}
-is highly optimized for modern visualization frameworks. It returns the raw
-bounds and observed residuals, making it simple to create faceted graphics
-using \code{ggplot2}.
+Unlike graphical methods such as \code{plot_envelope()}, \code{df_envelopes()}
+delegates the extraction of envelope data to class-specific methods. Such methods
+may return envelope bounds and observed residuals suitable for graphics
+in other packages.
 }
 \seealso{
-For class-specific implementations, consult the documentation of the
-corresponding downstream regression package.
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }

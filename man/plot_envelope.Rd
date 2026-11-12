@@ -22,11 +22,11 @@ residuals. It is a visual diagnostic tool to assess goodness-of-fit and
 distributional assumptions.
 }
 \details{
-This generic evaluates if the observed residuals behave as expected under the
-fitted model by comparing them to simulated confidence bands. Methods may
+Class-specific methods evaluate whether observed residuals behave as expected under the
+fitted model by comparing them with simulated confidence bands. Methods may
 support different residual types (e.g., randomized quantile, Cox-Snell).
 }
 \seealso{
-For class-specific implementations, consult the documentation of the
-corresponding downstream regression package.
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }

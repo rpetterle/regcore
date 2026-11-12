@@ -27,6 +27,6 @@ modeling and academic reporting. Methods usually identify random effects,
 multiple linear predictors, and assign proper indices for longitudinal data.
 }
 \seealso{
-For class-specific implementations, consult the documentation of the
-corresponding downstream regression package.
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }

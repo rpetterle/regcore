@@ -25,7 +25,13 @@ This S3 generic streamlines the creation of clean, publication-ready tables.
 Downstream methods usually handle multiple predictors, align identical variables
 across models, and can format the output as a LaTeX tabular environment.
 }
+\examples{
+fit <- structure(list(beta = c(intercept = 0.3, slope = -0.2)), class = "demo_coef")
+summary_coef.demo_coef <- function(object, ...) object$beta
+summary_coef(fit)
+
+}
 \seealso{
-For class-specific implementations, consult the documentation of the
-corresponding downstream regression package.
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }
