@@ -19,7 +19,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Ricardo Rasmussen Petterle \email{ricardopetterle@ufpr.br} (\href{https://orcid.org/0000-0001-7735-1077}{ORCID})
+\strong{Maintainer}: Ricardo Rasmussen Petterle \email{ricardopetterle@ufpr.br} (\href{https://orcid.org/0000-0001-7735-1077}{ORCID}) [copyright holder]
 
 }
 \keyword{internal}

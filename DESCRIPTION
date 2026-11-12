@@ -1,9 +1,9 @@
 Package: regcore
-Title: S3 Generic Interfaces for Regression Models
+Title: S3 Generic Functions for Regression Models
 Version: 0.1.0
-Authors@R: 
-    person("Ricardo Rasmussen", "Petterle", , "ricardopetterle@ufpr.br", role = c("aut", "cre"),
-           comment = c(ORCID = "https://orcid.org/0000-0001-7735-1077"))
+Authors@R:
+    person("Ricardo Rasmussen", "Petterle", email = "ricardopetterle@ufpr.br",
+    role = c("aut", "cre", "cph"), comment = c(ORCID = "0000-0001-7735-1077"))
 Description: Defines S3 generic functions for model comparison, coefficient
     summaries, goodness-of-fit tables, equation extraction, random-effects
     summaries, diagnostic plots, variable selection, and methods reporting.
