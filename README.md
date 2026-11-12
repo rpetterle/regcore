@@ -1,10 +1,10 @@
-# regcore: S3 Generic Methods for Regression Models <img src="man/figures/Logo.png" align="right" width="309" />
+# regcore: S3 Generic Functions for Regression Models <img src="man/figures/Logo.png" align="right" width="309" />
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/rpetterle/regcore/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rpetterle/regcore/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The **regcore** package defines S3 generic methods used by regression packages to provide model comparison, coefficient summaries, goodness-of-fit tables, diagnostics, random-effects summaries, and methods reporting. It does **not** fit regression models or implement statistical tests by itself. Class-specific methods are defined by packages that extend these interfaces.
+The **regcore** package defines S3 generic functions used by regression packages to provide model comparison, coefficient summaries, goodness-of-fit tables, diagnostics, random-effects summaries, and methods reporting. It does **not** fit regression models or implement statistical tests by itself. Class-specific methods are defined by packages that extend these interfaces.
 
 ## Available generics
 
