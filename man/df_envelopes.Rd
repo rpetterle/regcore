@@ -2,23 +2,31 @@
 % Please edit documentation in R/generics.R
 \name{df_envelopes}
 \alias{df_envelopes}
-\title{Extract Envelope Data into a Data Frame}
+\title{Extract Envelope Data into a Tidy Data Frame}
 \usage{
 df_envelopes(object, ...)
 }
 \arguments{
 \item{object}{A fitted model object.}
 
-\item{...}{Additional arguments passed to specific methods.}
+\item{...}{Additional fitted model objects, and arguments passed to specific
+methods (e.g., number of simulations).}
+}
+\value{
+A \code{data.frame} containing columns for theoretical quantiles, observed residuals,
+envelope bounds, and a factor column indicating the source model.
 }
 \description{
-Extract Envelope Data into a Data Frame
+Extracts the coordinates of simulated envelopes from one or more fitted models,
+returning a tidy data frame in long format.
+}
+\details{
+Unlike graphical methods such as \code{plot_envelope()}, \code{df_envelopes()}
+delegates the extraction of envelope data to class-specific methods. Such methods
+may return envelope bounds and observed residuals suitable for graphics
+in other packages.
 }
 \seealso{
-For details on specific methods, see the documentation in their respective packages:
-\itemize{
-\item \code{\link[betamodal]{df_envelopes.betamodal}} for betamodal models.
-\item \code{\link[unitregTMB]{df_envelopes.unitregTMB}} for unitregTMB models.
-\item \code{\link[uigTMB]{df_envelopes.uigTMB}} for uigTMB models.
-}
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }

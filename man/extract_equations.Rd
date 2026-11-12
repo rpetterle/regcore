@@ -9,16 +9,24 @@ extract_equations(object, ...)
 \arguments{
 \item{object}{A fitted model object.}
 
-\item{...}{Additional arguments passed to specific methods.}
+\item{...}{Additional arguments passed to specific methods (e.g., specifying
+"symbolic" or "numeric" modes, or selecting specific submodels).}
+}
+\value{
+Generally expected to return a character string containing the LaTeX code
+for the equations, and to print the output directly to the console.
 }
 \description{
-Extract Mathematical Equations from Fitted Models
+Extracts the mathematical formulation of a fitted model. Downstream methods
+typically support generating both theoretical (symbolic with Greek letters)
+and fitted (numeric with estimated coefficients) equations formatted in LaTeX.
+}
+\details{
+This is an S3 generic. It is designed to bridge the gap between statistical
+modeling and academic reporting. Methods usually identify random effects,
+multiple linear predictors, and assign proper indices for longitudinal data.
 }
 \seealso{
-For details on specific methods, see the documentation in their respective packages:
-\itemize{
-\item \code{\link[betamodal]{extract_equations.betamodal}} for betamodal models.
-\item \code{\link[unitregTMB]{extract_equations.unitregTMB}} for unitregTMB models.
-\item \code{\link[uigTMB]{extract_equations.uigTMB}} for uigTMB models.
-}
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }

@@ -7,16 +7,22 @@
 pairwise_vuong_test(...)
 }
 \arguments{
-\item{...}{Fitted model objects.}
+\item{...}{Fitted model objects to be compared.}
+}
+\value{
+The return value depends on the class-specific method, often a structured
+collection of pairwise statistics and p-values.
 }
 \description{
-Pairwise Vuong Test for Multiple Models
+Conducts pairwise Vuong likelihood ratio tests across multiple non-nested
+competing models.
+}
+\details{
+Downstream methods can compare more than two models simultaneously,
+returning a matrix of comparisons (and, when supported, adjusted p-values) to assess
+relative model fit.
 }
 \seealso{
-For details on specific methods, see the documentation in their respective packages:
-\itemize{
-\item \code{\link[betamodal]{pairwise_vuong_test.betamodal}} for betamodal models.
-\item \code{\link[unitregTMB]{pairwise_vuong_test.unitregTMB}} for unitregTMB models.
-\item \code{\link[uigTMB]{pairwise_vuong_test.uigTMB}} for uigTMB models.
-}
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }

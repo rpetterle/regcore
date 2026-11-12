@@ -2,7 +2,7 @@
 % Please edit documentation in R/generics.R
 \name{random_effects}
 \alias{random_effects}
-\title{Extract Random Effects}
+\title{Extract Predicted Random Effects}
 \usage{
 random_effects(object, ...)
 }
@@ -11,14 +11,19 @@ random_effects(object, ...)
 
 \item{...}{Additional arguments passed to specific methods.}
 }
+\value{
+Typically returns a list (one element per grouping variable) containing
+data frames of the estimated random effects.
+}
 \description{
-Extract Random Effects
+Extracts predicted random effects (typically conditional modes) from
+a fitted mixed-effects model.
+}
+\details{
+This S3 generic provides a unified way to retrieve conditional modes. Methods
+typically organize the output by grouping factors, handling multiple random terms.
 }
 \seealso{
-For details on specific methods, see the documentation in their respective packages:
-\itemize{
-\item \code{\link[betamodal]{random_effects.betamodal}} for betamodal models.
-\item \code{\link[unitregTMB]{random_effects.unitregTMB}} for unitregTMB models.
-\item \code{\link[uigTMB]{random_effects.uigTMB}} for uigTMB models.
-}
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }

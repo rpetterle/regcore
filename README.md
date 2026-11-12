@@ -1,60 +1,40 @@
-# regcore: Core Generic Functions for Regression R Packages <img src="man/figures/Logo.png" align="right" width="309" />
+# regcore: S3 Generic Interfaces for Regression Models <img src="man/figures/Logo.png" align="right" width="240" />
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/rpetterle/regcore/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rpetterle/regcore/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-**regcore** provides the foundational infrastructure and S3 generic functions for a suite of statistical regression R packages (such as `unitregTMB`, `betamodal`, `uigTMB`, and upcoming packages for other data structures, like continuous positive data). 
+The **regcore** package defines S3 generic interfaces used by regression packages to provide model comparison, coefficient summaries, goodness-of-fit tables, diagnostics, random-effects summaries, and methods reporting. It does **not** fit regression models or implement statistical tests by itself. Class-specific methods are defined by packages that extend these interfaces.
 
-By centralizing these generic methods, `regcore` ensures a consistent, standardized user interface and seamless interoperability across different regression frameworks, avoiding code duplication across packages and providing a unified experience for the end-user.
+## Available generics
 
-## Provided S3 Generics
-
-This package exports a set of generic functions that downstream regression packages implement. They are categorized into four main areas:
-
-### 1. Model Selection & Comparison
-* **`vuong_test()`**: Performs the Vuong test to rigorously compare two non-nested competing models.
-* **`pairwise_vuong_test()`**: Conducts pairwise Vuong tests across multiple competing models.
-* **`stepCriterion()`**: Performs stepwise variable selection based on information criteria.
-
-### 2. Model Summaries & Extraction
-* **`extract_equations()`**: Extracts the full mathematical equations from fitted models (useful for generating LaTeX formulas for academic papers).
-* **`summary_coef()`**: Extracts and formats summary coefficients into clean, standard tables.
-* **`random_effects()`**: Extracts the predicted random effects from mixed-effects models.
-
-### 3. Diagnostics & Goodness-of-Fit
-* **`gof_tab()`**: Computes, extracts, and formats goodness-of-fit statistics.
-* **`plot_envelope()`**: Generates simulated half-normal plots (envelopes) for model residuals.
-* **`df_envelopes()`**: Extracts the simulated envelope data into a standard `data.frame`, allowing users to build custom, publication-ready grayscale plots using `ggplot2` and `ggh4x`.
-* **`plot_ranef()`**: Creates caterpillar plots to visualize random effects and their uncertainties.
-
-### 4. Automated Reporting
-* **`write_methods()`**: Automatically generates draft text for the methods section based on the fitted model structure, streamlining academic reporting.
+| Purpose | Functions |
+| --- | --- |
+| Model comparison and selection | `vuong_test()`, `pairwise_vuong_test()`, `stepCriterion()` |
+| Model summaries | `summary_coef()`, `extract_equations()`, `random_effects()` |
+| Goodness-of-fit and diagnostics | `gof_tab()`, `plot_envelope()`, `df_envelopes()`, `plot_ranef()` |
+| Methods reporting | `write_methods()` |
 
 ## Installation
 
-You can install the development version of `regcore` from GitHub using the `remotes` package. 
-
 ```r
-# install.packages("remotes")
+install.packages("remotes")
 remotes::install_github("rpetterle/regcore")
 ```
 
-## Usage for Package Developers
+## Implementing an S3 method
 
-If you are developing a new statistical regression R package and want to utilize these standardized generics, simply import `regcore` in your `DESCRIPTION` file and define the respective methods for your model object class. 
-
-For example, in your new package:
+A downstream package can implement a method for the corresponding fitted-model class. For illustration, this example defines a temporary method using base R only:
 
 ```r
-#' @export
-extract_equations.my_new_model <- function(object, ...) {
-  # Implementation for your specific model class
-}
+library(regcore)
+fit <- structure(list(aic = 12.5), class = "demo_regression")
+gof_tab.demo_regression <- function(object, ...) data.frame(AIC = object$aic)
+gof_tab(fit)
 ```
 
-For details on specific methods already implemented, see the documentation in their respective packages.
+In a package that imports `regcore`, register the methods through the downstream package's own `NAMESPACE` (for example by using roxygen2 `@export` on the class-specific method). Refer to each generic's help page with `?gof_tab` or `?summary_coef`.
 
 ## License
 
-This package is licensed under the GPL (>= 3) License.
+GPL (>= 3).

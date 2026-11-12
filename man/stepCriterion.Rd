@@ -2,23 +2,31 @@
 % Please edit documentation in R/generics.R
 \name{stepCriterion}
 \alias{stepCriterion}
-\title{Stepwise Variable Selection}
+\title{Stepwise Variable Selection (Backward Elimination)}
 \usage{
 stepCriterion(object, ...)
 }
 \arguments{
-\item{object}{A fitted model object.}
+\item{object}{A fitted model object representing the starting full model.}
 
-\item{...}{Additional arguments passed to specific methods.}
+\item{...}{Additional arguments passed to specific methods (e.g., criterion choice,
+p-value thresholds).}
+}
+\value{
+Typically returns a fitted model object representing the final selected model
+after the backward elimination completes.
 }
 \description{
-Stepwise Variable Selection
+Performs backward variable selection to identify the most parsimonious model,
+removing predictors iteratively based on Wald test p-values or Information
+Criteria (AIC, BIC).
+}
+\details{
+Methods for this generic generally focus on optimizing the main location
+(mean/quantile) submodel, keeping random effects and auxiliary parameters
+(like precision or zero-inflation) intact during the elimination process.
 }
 \seealso{
-For details on specific methods, see the documentation in their respective packages:
-\itemize{
-\item \code{\link[betamodal]{stepCriterion.betamodal}} for betamodal models.
-\item \code{\link[unitregTMB]{stepCriterion.unitregTMB}} for unitregTMB models.
-\item \code{\link[uigTMB]{stepCriterion.uigTMB}} for uigTMB models.
-}
+The generic is implemented here; class-specific behavior is defined in
+downstream packages that provide S3 methods.
 }
