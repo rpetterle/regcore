@@ -1,4 +1,4 @@
-# regcore: S3 Generic Interfaces for Regression Models <img src="man/figures/Logo.png" align="right" width="240" />
+# regcore: S3 Generic Methods for Regression Models <img src="man/figures/Logo.png" align="right" width="240" />
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/rpetterle/regcore/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rpetterle/regcore/actions/workflows/R-CMD-check.yaml)
