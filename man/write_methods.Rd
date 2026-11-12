@@ -9,16 +9,23 @@ write_methods(object, ...)
 \arguments{
 \item{object}{A fitted model object.}
 
-\item{...}{Additional arguments passed to specific methods.}
+\item{...}{Additional arguments passed to specific methods (e.g., language
+selection like English or Portuguese).}
+}
+\value{
+Invisibly returns a list containing the generated text and the BibTeX
+citation, while printing them to the console.
 }
 \description{
-Automatically Generate Methods Section Text
+Translates the structure of a fitted model into boilerplate draft text for
+the "Methods" section of academic papers or reports.
+}
+\details{
+This generic automates academic reporting by dynamically detecting the
+distribution family, link functions, inflation structures, and random effects,
+outputting standardized descriptive text and the software citation.
 }
 \seealso{
-For details on specific methods, see the documentation in their respective packages:
-\itemize{
-\item \code{\link[betamodal]{write_methods.betamodal}} for betamodal models.
-\item \code{\link[unitregTMB]{write_methods.unitregTMB}} for unitregTMB models.
-\item \code{\link[uigTMB]{write_methods.uigTMB}} for uigTMB models.
-}
+For class-specific implementations, consult the documentation of the
+corresponding downstream regression package.
 }

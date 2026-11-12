@@ -9,18 +9,23 @@ vuong_test(object1, object2, ...)
 \arguments{
 \item{object1}{A fitted model object.}
 
-\item{object2}{Another fitted model object.}
+\item{object2}{Another fitted model object to be compared with \code{object1}.}
 
-\item{...}{Additional arguments passed to specific methods.}
+\item{...}{Additional arguments passed to specific methods (e.g., alternative hypothesis).}
+}
+\value{
+Generally returns an object of class \code{htest} containing the test statistic,
+p-value, and the conclusion regarding model preference.
 }
 \description{
-Vuong Test for Non-Nested Models
+Performs the Vuong likelihood ratio test to compare two non-nested competing
+regression models to determine which is closer to the true data-generating process.
+}
+\details{
+The Vuong test utilizes conditional pointwise log-likelihoods. This S3 generic
+dispatches the extraction and statistical testing to specific model implementations.
 }
 \seealso{
-For details on specific methods, see the documentation in their respective packages:
-\itemize{
-\item \code{\link[betamodal]{vuong_test.betamodal}} for betamodal models.
-\item \code{\link[unitregTMB]{vuong_test.unitregTMB}} for unitregTMB models.
-\item \code{\link[uigTMB]{vuong_test.uigTMB}} for uigTMB models.
-}
+For class-specific implementations, consult the documentation of the
+corresponding downstream regression package.
 }

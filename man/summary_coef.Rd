@@ -9,16 +9,23 @@ summary_coef(object, ...)
 \arguments{
 \item{object}{A fitted model object.}
 
-\item{...}{Additional arguments passed to specific methods.}
+\item{...}{Additional fitted model objects for comparison, and other arguments
+passed to specific methods (e.g., selecting submodels, LaTeX table prep).}
+}
+\value{
+Typically returns a structured object containing the compiled coefficients
+and standard errors, accompanied by a custom print method.
 }
 \description{
-Extract and Format Summary Coefficients
+Extracts, formats, and compiles fixed-effects coefficients and their standard
+errors from one or multiple fitted models, facilitating side-by-side comparisons.
+}
+\details{
+This S3 generic streamlines the creation of clean, publication-ready tables.
+Downstream methods usually handle multiple predictors, align identical variables
+across models, and can format the output as a LaTeX tabular environment.
 }
 \seealso{
-For details on specific methods, see the documentation in their respective packages:
-\itemize{
-\item \code{\link[betamodal]{summary_coef.betamodal}} for betamodal models.
-\item \code{\link[unitregTMB]{summary_coef.unitregTMB}} for unitregTMB models.
-\item \code{\link[uigTMB]{summary_coef.uigTMB}} for uigTMB models.
-}
+For class-specific implementations, consult the documentation of the
+corresponding downstream regression package.
 }

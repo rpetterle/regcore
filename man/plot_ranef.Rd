@@ -7,18 +7,23 @@
 plot_ranef(object, ...)
 }
 \arguments{
-\item{object}{A fitted model object.}
+\item{object}{A fitted model object containing random effects.}
 
-\item{...}{Additional arguments passed to specific methods.}
+\item{...}{Additional graphical arguments passed to specific plotting methods.}
+}
+\value{
+Invisibly returns a data frame containing the sorted estimated random effects
+and their confidence bounds, while generating a plot.
 }
 \description{
-Plot Random Effects (Caterpillar Plot)
+Produces a caterpillar plot of the conditional modes (BLUPs) of the random
+effects from a fitted mixed-effects model, along with their confidence intervals.
+}
+\details{
+Visualizes unobserved heterogeneity at the group level. The generic delegates
+the extraction and sorting of the estimates to class-specific methods.
 }
 \seealso{
-For details on specific methods, see the documentation in their respective packages:
-\itemize{
-\item \code{\link[betamodal]{plot_ranef.betamodal}} for betamodal models.
-\item \code{\link[unitregTMB]{plot_ranef.unitregTMB}} for unitregTMB models.
-\item \code{\link[uigTMB]{plot_ranef.uigTMB}} for uigTMB models.
-}
+For class-specific implementations, consult the documentation of the
+corresponding downstream regression package.
 }

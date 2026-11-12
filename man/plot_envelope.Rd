@@ -2,23 +2,31 @@
 % Please edit documentation in R/generics.R
 \name{plot_envelope}
 \alias{plot_envelope}
-\title{Plot Simulated Envelope for Residuals}
+\title{Diagnostic Plots with Simulated Envelopes}
 \usage{
 plot_envelope(object, ...)
 }
 \arguments{
 \item{object}{A fitted model object.}
 
-\item{...}{Additional arguments passed to specific methods.}
+\item{...}{Additional arguments passed to specific methods (e.g., number of
+simulations, confidence level, parallel computing cores).}
+}
+\value{
+Invisibly returns a list or data frame containing the envelope coordinates,
+while producing a plot as a side effect.
 }
 \description{
-Plot Simulated Envelope for Residuals
+Generates a (half-)normal probability plot with a simulated envelope for model
+residuals. It is a visual diagnostic tool to assess goodness-of-fit and
+distributional assumptions.
+}
+\details{
+This generic evaluates if the observed residuals behave as expected under the
+fitted model by comparing them to simulated confidence bands. Methods may
+support different residual types (e.g., randomized quantile, Cox-Snell).
 }
 \seealso{
-For details on specific methods, see the documentation in their respective packages:
-\itemize{
-\item \code{\link[betamodal]{plot_envelope.betamodal}} for betamodal models.
-\item \code{\link[unitregTMB]{plot_envelope.unitregTMB}} for unitregTMB models.
-\item \code{\link[uigTMB]{plot_envelope.uigTMB}} for uigTMB models.
-}
+For class-specific implementations, consult the documentation of the
+corresponding downstream regression package.
 }

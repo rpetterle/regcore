@@ -18,14 +18,10 @@
 #' Generally expected to return a character string containing the LaTeX code 
 #' for the equations, and to print the output directly to the console.
 #'
-#' @seealso 
-#' For details on specific methods, see the documentation in their respective packages:
-#' \itemize{
-#'   \item \code{\link[betamodal]{extract_equations.betamodal}}
-#'   \item \code{\link[unitregTMB]{extract_equations.unitregTMB}}
-#'   \item \code{\link[uigTMB]{extract_equations.uigTMB}}
-#' }
-#' 
+#' @seealso
+#' For class-specific implementations, consult the documentation of the
+#' corresponding downstream regression package.
+#'
 #' @export
 extract_equations <- function(object, ...) {
   UseMethod("extract_equations")
@@ -49,13 +45,10 @@ extract_equations <- function(object, ...) {
 #' Generally returns a structured object (e.g., a list or data frame) containing 
 #' the computed metrics for each evaluated model, along with custom print methods.
 #'
-#' @seealso 
-#' \itemize{
-#'   \item \code{\link[betamodal]{gof_tab.betamodal}}
-#'   \item \code{\link[unitregTMB]{gof_tab.unitregTMB}}
-#'   \item \code{\link[uigTMB]{gof_tab.uigTMB}}
-#' }
-#' 
+#' @seealso
+#' For class-specific implementations, consult the documentation of the
+#' corresponding downstream regression package.
+#'
 #' @export
 gof_tab <- function(object, ...) {
   UseMethod("gof_tab")
@@ -81,13 +74,10 @@ gof_tab <- function(object, ...) {
 #' Invisibly returns a list or data frame containing the envelope coordinates, 
 #' while producing a plot as a side effect.
 #'
-#' @seealso 
-#' \itemize{
-#'   \item \code{\link[betamodal]{plot_envelope.betamodal}}
-#'   \item \code{\link[unitregTMB]{plot_envelope.unitregTMB}}
-#'   \item \code{\link[uigTMB]{plot_envelope.uigTMB}}
-#' }
-#' 
+#' @seealso
+#' For class-specific implementations, consult the documentation of the
+#' corresponding downstream regression package.
+#'
 #' @export
 plot_envelope <- function(object, ...) {
   UseMethod("plot_envelope")
@@ -112,13 +102,10 @@ plot_envelope <- function(object, ...) {
 #' Typically returns a structured object containing the compiled coefficients 
 #' and standard errors, accompanied by a custom print method.
 #'
-#' @seealso 
-#' \itemize{
-#'   \item \code{\link[betamodal]{summary_coef.betamodal}}
-#'   \item \code{\link[unitregTMB]{summary_coef.unitregTMB}}
-#'   \item \code{\link[uigTMB]{summary_coef.uigTMB}}
-#' }
-#' 
+#' @seealso
+#' For class-specific implementations, consult the documentation of the
+#' corresponding downstream regression package.
+#'
 #' @export
 summary_coef <- function(object, ...) {
   UseMethod("summary_coef")
@@ -141,13 +128,10 @@ summary_coef <- function(object, ...) {
 #' Invisibly returns a data frame containing the sorted estimated random effects 
 #' and their confidence bounds, while generating a plot.
 #'
-#' @seealso 
-#' \itemize{
-#'   \item \code{\link[betamodal]{plot_ranef.betamodal}}
-#'   \item \code{\link[unitregTMB]{plot_ranef.unitregTMB}}
-#'   \item \code{\link[uigTMB]{plot_ranef.uigTMB}}
-#' }
-#' 
+#' @seealso
+#' For class-specific implementations, consult the documentation of the
+#' corresponding downstream regression package.
+#'
 #' @export
 plot_ranef <- function(object, ...) {
   UseMethod("plot_ranef")
@@ -172,13 +156,10 @@ plot_ranef <- function(object, ...) {
 #' Invisibly returns a list containing the generated text and the BibTeX 
 #' citation, while printing them to the console.
 #'
-#' @seealso 
-#' \itemize{
-#'   \item \code{\link[betamodal]{write_methods.betamodal}}
-#'   \item \code{\link[unitregTMB]{write_methods.unitregTMB}}
-#'   \item \code{\link[uigTMB]{write_methods.uigTMB}}
-#' }
-#' 
+#' @seealso
+#' For class-specific implementations, consult the documentation of the
+#' corresponding downstream regression package.
+#'
 #' @export
 write_methods <- function(object, ...) {
   UseMethod("write_methods")
@@ -201,13 +182,10 @@ write_methods <- function(object, ...) {
 #' Typically returns a list (one element per grouping variable) containing 
 #' data frames of the estimated random effects.
 #'
-#' @seealso 
-#' \itemize{
-#'   \item \code{\link[betamodal]{random_effects.betamodal}}
-#'   \item \code{\link[unitregTMB]{random_effects.unitregTMB}}
-#'   \item \code{\link[uigTMB]{random_effects.uigTMB}}
-#' }
-#' 
+#' @seealso
+#' For class-specific implementations, consult the documentation of the
+#' corresponding downstream regression package.
+#'
 #' @export
 random_effects <- function(object, ...) {
   UseMethod("random_effects")
@@ -231,13 +209,10 @@ random_effects <- function(object, ...) {
 #' Generally returns an object of class \code{htest} containing the test statistic, 
 #' p-value, and the conclusion regarding model preference.
 #'
-#' @seealso 
-#' \itemize{
-#'   \item \code{\link[betamodal]{vuong_test.betamodal}}
-#'   \item \code{\link[unitregTMB]{vuong_test.unitregTMB}}
-#'   \item \code{\link[uigTMB]{vuong_test.uigTMB}}
-#' }
-#' 
+#' @seealso
+#' For class-specific implementations, consult the documentation of the
+#' corresponding downstream regression package.
+#'
 #' @export
 vuong_test <- function(object1, object2, ...) {
   UseMethod("vuong_test")
@@ -260,13 +235,10 @@ vuong_test <- function(object1, object2, ...) {
 #' Returns a structured object (e.g., \code{pairwise.htest}) detailing the 
 #' pairwise test statistics and adjusted p-values.
 #'
-#' @seealso 
-#' \itemize{
-#'   \item \code{\link[betamodal]{pairwise_vuong_test.betamodal}}
-#'   \item \code{\link[unitregTMB]{pairwise_vuong_test.unitregTMB}}
-#'   \item \code{\link[uigTMB]{pairwise_vuong_test.uigTMB}}
-#' }
-#' 
+#' @seealso
+#' For class-specific implementations, consult the documentation of the
+#' corresponding downstream regression package.
+#'
 #' @export
 pairwise_vuong_test <- function(...) {
   UseMethod("pairwise_vuong_test")
@@ -292,13 +264,10 @@ pairwise_vuong_test <- function(...) {
 #' Typically returns a fitted model object representing the final selected model 
 #' after the backward elimination completes.
 #'
-#' @seealso 
-#' \itemize{
-#'   \item \code{\link[betamodal]{stepCriterion.betamodal}}
-#'   \item \code{\link[unitregTMB]{stepCriterion.unitregTMB}}
-#'   \item \code{\link[uigTMB]{stepCriterion.uigTMB}}
-#' }
-#' 
+#' @seealso
+#' For class-specific implementations, consult the documentation of the
+#' corresponding downstream regression package.
+#'
 #' @export
 stepCriterion <- function(object, ...) {
   UseMethod("stepCriterion")
@@ -324,13 +293,10 @@ stepCriterion <- function(object, ...) {
 #' A \code{data.frame} containing columns for theoretical quantiles, observed residuals, 
 #' envelope bounds, and a factor column indicating the source model.
 #'
-#' @seealso 
-#' \itemize{
-#'   \item \code{\link[betamodal]{df_envelopes.betamodal}}
-#'   \item \code{\link[unitregTMB]{df_envelopes.unitregTMB}}
-#'   \item \code{\link[uigTMB]{df_envelopes.uigTMB}}
-#' }
-#' 
+#' @seealso
+#' For class-specific implementations, consult the documentation of the
+#' corresponding downstream regression package.
+#'
 #' @export
 df_envelopes <- function(object, ...) {
   UseMethod("df_envelopes")

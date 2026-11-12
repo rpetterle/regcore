@@ -2,23 +2,29 @@
 % Please edit documentation in R/generics.R
 \name{gof_tab}
 \alias{gof_tab}
-\title{Extract Goodness-of-Fit Statistics}
+\title{Goodness-of-Fit Table for Regression Models}
 \usage{
 gof_tab(object, ...)
 }
 \arguments{
 \item{object}{A fitted model object.}
 
-\item{...}{Additional arguments passed to specific methods.}
+\item{...}{Additional fitted model objects for side-by-side comparison.}
+}
+\value{
+Generally returns a structured object (e.g., a list or data frame) containing
+the computed metrics for each evaluated model, along with custom print methods.
 }
 \description{
-Extract Goodness-of-Fit Statistics
+Computes, compiles, and compares standard goodness-of-fit metrics
+(such as log-likelihood, AIC, and BIC) for one or multiple fitted models.
+}
+\details{
+This S3 generic acts as a unified interface to evaluate model performance.
+When multiple models are provided via \code{...}, downstream methods typically
+align the metrics into a clear comparative table.
 }
 \seealso{
-For details on specific methods, see the documentation in their respective packages:
-\itemize{
-\item \code{\link[betamodal]{gof_tab.betamodal}} for betamodal models.
-\item \code{\link[unitregTMB]{gof_tab.unitregTMB}} for unitregTMB models.
-\item \code{\link[uigTMB]{gof_tab.uigTMB}} for uigTMB models.
-}
+For class-specific implementations, consult the documentation of the
+corresponding downstream regression package.
 }

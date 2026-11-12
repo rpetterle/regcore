@@ -7,16 +7,22 @@
 pairwise_vuong_test(...)
 }
 \arguments{
-\item{...}{Fitted model objects.}
+\item{...}{Fitted model objects to be compared.}
+}
+\value{
+Returns a structured object (e.g., \code{pairwise.htest}) detailing the
+pairwise test statistics and adjusted p-values.
 }
 \description{
-Pairwise Vuong Test for Multiple Models
+Conducts pairwise Vuong likelihood ratio tests across multiple non-nested
+competing models.
+}
+\details{
+This generic is useful when evaluating more than two models simultaneously,
+generating a matrix of comparisons (with adjusted p-values) to identify the
+best fitting model.
 }
 \seealso{
-For details on specific methods, see the documentation in their respective packages:
-\itemize{
-\item \code{\link[betamodal]{pairwise_vuong_test.betamodal}} for betamodal models.
-\item \code{\link[unitregTMB]{pairwise_vuong_test.unitregTMB}} for unitregTMB models.
-\item \code{\link[uigTMB]{pairwise_vuong_test.uigTMB}} for uigTMB models.
-}
+For class-specific implementations, consult the documentation of the
+corresponding downstream regression package.
 }
