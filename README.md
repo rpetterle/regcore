@@ -24,7 +24,7 @@ remotes::install_github("rpetterle/regcore")
 
 ## Implementing an S3 method
 
-A downstream package can implement a method for the corresponding fitted-model class. For illustration, this example defines a temporary method using base R only:
+Other R packages can implement methods for their fitted-model classes. The following example illustrates S3 method dispatch using only base R:
 
 ```r
 library(regcore)
