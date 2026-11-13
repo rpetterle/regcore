@@ -37,7 +37,7 @@ In a package that imports `regcore`, register the methods through the downstream
 
 ## Authors
 
-# Ricardo Rasmussen Petterle
+### Ricardo Rasmussen Petterle
 
 ## License
 
