@@ -35,6 +35,10 @@ gof_tab(fit)
 
 In a package that imports `regcore`, register the methods through the downstream package's own `NAMESPACE` (for example by using roxygen2 `@export` on the class-specific method). Refer to each generic's help page with `?gof_tab` or `?summary_coef`.
 
+## Authors
+
+# Ricardo Rasmussen Petterle
+
 ## License
 
 GPL (>= 3).
