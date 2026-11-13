@@ -4,20 +4,23 @@ This is the initial CRAN submission of `regcore`, a package providing S3 generic
 
 The package provides common interfaces that can be implemented by other R packages, including `betamodal` and `unitregTMB`. It has no runtime dependencies beyond R.
 
+
 ## Check results
 
 - Ubuntu Linux (R 4.4.2): 0 errors, 0 warnings, 0 notes.
-- Windows (R-devel, WinBuilder): 0 errors, 0 warnings, 1 note.
-- GitHub Actions: R CMD check passed.
-- macOS: Not independently verified.
+- Windows R-devel (WinBuilder): 0 errors, 0 warnings, 1 note.
+- Linux R-devel (GitHub Actions): 0 errors, 0 warnings, 1 note.
 
-The local Ubuntu check was performed using `--as-cran`, with the external system clock verification disabled.
+The local Ubuntu check was performed with the external system
+clock verification disabled.
 
-The only note reported by WinBuilder was:
+The only note reported by the R-devel checks was:
 
     New submission
 
-This note is expected because `regcore` is being submitted to CRAN for the first time.
+This note is expected because this is the first submission
+of regcore to CRAN.
+
 
 ## Reverse dependencies
 
